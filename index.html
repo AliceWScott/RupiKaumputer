@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|IBM+Plex+Mono" rel="stylesheet">
+	  <meta charset="utf-8">
+
+	  <title>The HTML5 Herald</title>
+	  <meta name="description" content="Rupi Kaumputer">
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	  <script>
+		$(function() {
+			refreshText();
+		});
+		function refreshText() {
+			$.get("../cgi-bin/test.py", function(data, status){
+				$("#text").html(data);
+	  		});		
+		}
+	 
+	</script>
+	</head>
+	<body overflow="scroll" position="relative">
+		<h1>Rupi Kaumputer</h1>
+		<h3> By: Alice Scott, Python, Flickr, and Rupi Kaur's 'Milk And Honey'</h3>
+		<div id="text"></div>
+		<div class="wrapper">
+			<button  onclick="refreshText();">Refresh</button>
+		</div>
+	</body>
+</html>
