@@ -1,2 +1,3 @@
 # RupiKaumputer
-Markov chain text generation, trained on Rupi Kaur poetry
+Rupi Kaur style poetry, generated using Markov Chains. 
+This was inspired by allegations that Rupi Kaur had herself been heavily "inspired" by other online poets. 
